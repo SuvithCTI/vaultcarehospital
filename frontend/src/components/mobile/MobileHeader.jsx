@@ -116,7 +116,7 @@ export const MobileHeader = () => {
               <div className="flex items-center justify-between text-[10px] text-slate-400 px-1 pt-1 font-medium">
                 <span className="flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
-                  NABH & JCI Accredited
+                  Verified Hospital Care
                 </span>
                 <span className="text-teal-400 font-bold">24/7 Level-1 Trauma</span>
               </div>

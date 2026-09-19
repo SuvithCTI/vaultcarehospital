@@ -34,24 +34,32 @@ export const DesktopHero = () => {
       title: "Modular Robotic OT Suite",
       badge: "Da Vinci Xi 4th Gen",
       tag: "14 Modular OTs Active",
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+      image: "/services/robotic.jpg",
       caption: "Class-100 Ultra-Clean Laminar Airflow Surgical Bays",
     },
     {
       title: "Silent 3T MRI & 256-Slice CT",
       badge: "AI-Assisted Diagnostics",
       tag: "24/7 Rapid Diagnostics",
-      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
+      image: "/departments/radiology.jpg",
       caption: "Whisper-Quiet Wide Bore Imaging for Patient Comfort",
     },
     {
       title: "Smart Intensive Care Units",
       badge: "Level-1 Critical Care",
       tag: "140 Multi-Organ Beds",
-      image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80",
+      image: "/services/critical-care.jpg",
       caption: "1:1 Dedicated Critical Care Nursing & Telemetry",
     },
   ];
+
+  // Preload local slide assets into browser memory for 0ms transition
+  useEffect(() => {
+    showcaseSlides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+  }, []);
 
   // Automatic slide transitions every 3.5 seconds
   useEffect(() => {
@@ -70,6 +78,12 @@ export const DesktopHero = () => {
         <img
           src="/banners/home.jpg"
           alt="Vault Care Hospital Campus"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          onError={(e) => {
+            e.currentTarget.src = "/departments/cardiology.jpg";
+          }}
           className="w-full h-full object-cover object-center scale-100 filter brightness-[1.02] opacity-95"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/45 to-white/15" />
@@ -228,6 +242,12 @@ export const DesktopHero = () => {
                   key={activeSlide}
                   src={showcaseSlides[activeSlide].image}
                   alt={showcaseSlides[activeSlide].title}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  onError={(e) => {
+                    e.currentTarget.src = "/departments/cardiology.jpg";
+                  }}
                   initial={{ opacity: 0, scale: 1.04 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}

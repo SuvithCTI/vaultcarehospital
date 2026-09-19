@@ -90,6 +90,12 @@ export const PcContact = () => {
           <img
             src="/banners/contact.jpg"
             alt="Vault Care Emergency Command Hub"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={(e) => {
+              e.currentTarget.src = "/departments/cardiology.jpg";
+            }}
             className="w-full h-full object-cover object-center scale-100 filter brightness-[1.02] opacity-85"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-teal-50/40" />

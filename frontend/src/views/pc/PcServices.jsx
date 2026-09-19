@@ -304,6 +304,12 @@ export const PcServices = () => {
           <img
             src="/banners/services.jpg"
             alt="Vault Care Clinical Services"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={(e) => {
+              e.currentTarget.src = "/departments/cardiology.jpg";
+            }}
             className="w-full h-full object-cover object-center scale-100 filter brightness-[1.02] opacity-85"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-teal-50/40" />
@@ -387,6 +393,11 @@ export const PcServices = () => {
               <img
                 src={activeService.image}
                 alt={activeService.title}
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = "/departments/cardiology.jpg";
+                }}
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex flex-col justify-between p-3.5 sm:p-7">
@@ -535,6 +546,11 @@ export const PcServices = () => {
               <img
                 src={activePkg.image}
                 alt={activePkg.name}
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = "/departments/cardiology.jpg";
+                }}
                 className="absolute inset-0 w-full h-full object-cover object-center filter brightness-100 contrast-[1.04] transition-all duration-500 scale-100 hover:scale-[1.02]"
               />
               {/* Refined Frosted Glass Overlay */}

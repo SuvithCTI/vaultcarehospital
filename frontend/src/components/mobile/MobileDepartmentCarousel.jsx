@@ -29,6 +29,8 @@ export const MobileDepartmentCarousel = () => {
             <img
               src={d.bannerImage || d.image || "/departments/cardiology.jpg"}
               alt={d.name}
+              loading="lazy"
+              decoding="async"
               onError={(e) => { e.currentTarget.src = "/departments/cardiology.jpg"; }}
               className="w-full h-20 rounded-xl object-cover"
             />

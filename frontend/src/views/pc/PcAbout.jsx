@@ -102,6 +102,12 @@ export const PcAbout = () => {
           <img
             src="/banners/about.jpg"
             alt="Vault Care Hospital Grand Atrium"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={(e) => {
+              e.currentTarget.src = "/departments/cardiology.jpg";
+            }}
             className="w-full h-full object-cover object-center scale-100 filter brightness-[1.02] opacity-85"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/65 to-amber-50/40" />
@@ -110,7 +116,7 @@ export const PcAbout = () => {
         <div className="relative z-10 max-w-3xl space-y-2.5">
           <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-100/90 text-amber-950 text-[11px] font-bold uppercase tracking-wider border border-amber-300/80 shadow-xs">
             <Building2 className="w-3.5 h-3.5 text-amber-700" />
-            <span>28+ Years of Medical Excellence • NABH & JCI Accredited</span>
+            <span>28+ Years of Medical Excellence • Quaternary Care</span>
           </div>
           
           <h1 className="text-2xl sm:text-4xl font-extrabold font-heading tracking-tight text-slate-950 leading-tight">
@@ -168,6 +174,11 @@ export const PcAbout = () => {
                 <img
                   src="/logos/mission.jpg"
                   alt="Vault Care Mission 3D Logo"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = "/departments/cardiology.jpg";
+                  }}
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-400 animate-ping" />
@@ -214,6 +225,11 @@ export const PcAbout = () => {
                 <img
                   src="/logos/vision.jpg"
                   alt="Vault Care Vision 3D Logo"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = "/departments/cardiology.jpg";
+                  }}
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-orange-400 animate-ping" />
@@ -260,6 +276,11 @@ export const PcAbout = () => {
                 <img
                   src="/logos/values.jpg"
                   alt="Vault Care Core Values 3D Logo"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = "/departments/cardiology.jpg";
+                  }}
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping" />
@@ -319,6 +340,11 @@ export const PcAbout = () => {
                   <img
                     src="/logos/pillar_robotic.jpg"
                     alt="Robotic Precision & AI Diagnostics Logo"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.currentTarget.src = "/departments/cardiology.jpg";
+                    }}
                     className="w-full h-full object-cover"
                   />
                   <span className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-400 animate-ping" />
@@ -358,6 +384,11 @@ export const PcAbout = () => {
                   <img
                     src="/logos/pillar_trauma.jpg"
                     alt="24/7 Level-1 Trauma & Helipad Logo"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.currentTarget.src = "/departments/cardiology.jpg";
+                    }}
                     className="w-full h-full object-cover"
                   />
                   <span className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-rose-400 animate-ping" />
@@ -397,6 +428,11 @@ export const PcAbout = () => {
                   <img
                     src="/logos/pillar_ethical.jpg"
                     alt="Ethical & Transparent Care Logo"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.currentTarget.src = "/departments/cardiology.jpg";
+                    }}
                     className="w-full h-full object-cover"
                   />
                   <span className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-teal-400 animate-ping" />
@@ -436,6 +472,11 @@ export const PcAbout = () => {
                   <img
                     src="/logos/pillar_nursing.jpg"
                     alt="Compassionate Nursing Vigilance Logo"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.currentTarget.src = "/departments/cardiology.jpg";
+                    }}
                     className="w-full h-full object-cover"
                   />
                   <span className="absolute top-1 right-1 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-indigo-400 animate-ping" />

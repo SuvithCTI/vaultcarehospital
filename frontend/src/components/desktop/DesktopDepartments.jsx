@@ -237,6 +237,8 @@ export const DesktopDepartments = () => {
               <img
                 src={currentBanner}
                 alt={activeDept.name}
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
                   e.currentTarget.src = "/departments/cardiology.jpg";
                 }}

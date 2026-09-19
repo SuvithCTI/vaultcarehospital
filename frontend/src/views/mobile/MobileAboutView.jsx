@@ -13,6 +13,12 @@ export const MobileAboutView = () => {
           <img
             src="/banners/about.jpg"
             alt="Vault Care Hospital Grand Atrium"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={(e) => {
+              e.currentTarget.src = "/departments/cardiology.jpg";
+            }}
             className="w-full h-full object-cover object-center brightness-[1.02] opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-amber-50/40" />

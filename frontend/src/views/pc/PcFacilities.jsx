@@ -161,6 +161,12 @@ export const PcFacilities = () => {
           <img
             src="/banners/facilities.jpg"
             alt="Vault Care Facilities and Robotic Suites"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={(e) => {
+              e.currentTarget.src = "/departments/cardiology.jpg";
+            }}
             className="w-full h-full object-cover object-center scale-100 filter brightness-[1.02] opacity-85"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-teal-50/40" />
@@ -231,7 +237,11 @@ export const PcFacilities = () => {
                 <img
                   src={fac.image}
                   alt={fac.title}
-                  loading="eager"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = "/departments/cardiology.jpg";
+                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-[0.95]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />

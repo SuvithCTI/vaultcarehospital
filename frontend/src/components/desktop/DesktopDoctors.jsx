@@ -14,13 +14,14 @@ export const DesktopDoctors = () => {
   const [selectedGenderFilter, setSelectedGenderFilter] = useState("all");
   const [viewDoctorModal, setViewDoctorModal] = useState(null);
 
-  const filteredDoctors = doctors.filter((doc) => {
-    const matchesSearch = 
-      doc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      doc.specialization.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      doc.departmentName.toLowerCase().includes(searchQuery.toLowerCase());
+  const filteredDoctors = (doctors || []).filter((doc) => {
+    const s = searchQuery.toLowerCase();
+    const name = (doc.name || "").toLowerCase();
+    const spec = (doc.specialty || doc.specialization || "").toLowerCase();
+    const dept = (doc.department || doc.departmentName || "").toLowerCase();
+    const matchesSearch = name.includes(s) || spec.includes(s) || dept.includes(s);
     
-    const matchesDept = selectedDeptFilter === "all" || doc.departmentId === selectedDeptFilter;
+    const matchesDept = selectedDeptFilter === "all" || doc.deptId === selectedDeptFilter || doc.departmentId === selectedDeptFilter;
     const matchesGender = selectedGenderFilter === "all" || doc.gender?.toLowerCase() === selectedGenderFilter.toLowerCase();
 
     return matchesSearch && matchesDept && matchesGender;
@@ -34,7 +35,7 @@ export const DesktopDoctors = () => {
         <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white mt-1">
           Our Senior Medical Faculty
         </h2>
-        <p className="text-slate-800 text-sm mt-3">
+        <p className="text-slate-300 text-sm mt-3">
           Consult with board-certified physicians, professors of medicine, and fellowship-trained surgeons with an average of 18+ years clinical experience.
         </p>
       </div>
@@ -42,7 +43,7 @@ export const DesktopDoctors = () => {
       {/* Search & Filter Bar */}
       <div className="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-xl mb-10 grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
         <div className="md:col-span-5 relative">
-          <Search className="w-4 h-4 text-slate-800 absolute left-3.5 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search doctor by name, specialty, or condition..."
@@ -93,20 +94,25 @@ export const DesktopDoctors = () => {
               {/* Doctor Avatar & Badges */}
               <div className="relative h-56 overflow-hidden bg-slate-950">
                 <img
-                  src={doc.avatar}
+                  src={doc.image || doc.avatar || "/departments/cardiology.jpg"}
                   alt={doc.name}
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = "/departments/cardiology.jpg";
+                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
                 
                 <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-amber-300 text-xs font-bold flex items-center gap-1">
                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  {doc.rating}
+                  {doc.rating || "4.9"}
                 </div>
 
                 <div className="absolute bottom-3 left-3 right-3">
                   <span className="px-2.5 py-0.5 rounded-full bg-teal-500/30 text-teal-300 text-[11px] font-semibold backdrop-blur-md border border-teal-500/30">
-                    {doc.departmentName}
+                    {doc.department || doc.departmentName}
                   </span>
                 </div>
               </div>
@@ -117,16 +123,16 @@ export const DesktopDoctors = () => {
                   <h3 className="text-base font-bold text-white group-hover:text-teal-400 transition">
                     {doc.name}
                   </h3>
-                  <p className="text-xs text-cyan-300 font-medium">{doc.specialization}</p>
+                  <p className="text-xs text-cyan-300 font-medium">{doc.specialty || doc.specialization}</p>
                 </div>
 
-                <p className="text-xs text-slate-800 line-clamp-2 leading-relaxed">
+                <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
                   {doc.about}
                 </p>
 
-                <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-slate-800">
-                  <span>{doc.experienceYears}+ Yrs Exp</span>
-                  <span className="text-teal-400 font-bold text-sm">${doc.fee} Fee</span>
+                <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                  <span>{doc.experience || doc.experienceYears || "20+"} Exp</span>
+                  <span className="text-teal-400 font-bold text-sm">{doc.fee || "₹1,000"} Fee</span>
                 </div>
               </div>
             </div>

@@ -25,26 +25,31 @@ export const DoctorModal = ({ doctor, onClose }) => {
 
           <div className="flex flex-col sm:flex-row gap-5 items-start">
             <img
-              src={doctor.avatar}
+              src={doctor.image || doctor.avatar || "/departments/cardiology.jpg"}
               alt={doctor.name}
+              loading="lazy"
+              decoding="async"
+              onError={(e) => {
+                e.currentTarget.src = "/departments/cardiology.jpg";
+              }}
               className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-teal-500/40 shadow-xl"
             />
             <div className="flex-1">
               <span className="px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-400 text-xs font-semibold">
-                {doctor.departmentName}
+                {doctor.department || doctor.departmentName}
               </span>
               <h3 className="text-xl sm:text-2xl font-bold font-heading text-white mt-1.5">{doctor.name}</h3>
-              <p className="text-sm text-cyan-300 font-medium">{doctor.title}</p>
-              <p className="text-xs text-slate-800 mt-1">{doctor.education}</p>
+              <p className="text-sm text-cyan-300 font-medium">{doctor.role || doctor.title}</p>
+              <p className="text-xs text-slate-300 mt-1">{doctor.qualification || doctor.education}</p>
 
               <div className="flex items-center gap-3 mt-3 text-xs text-slate-300">
                 <span className="flex items-center gap-1 font-bold text-amber-400">
-                  <Star className="w-3.5 h-3.5 fill-amber-400" /> {doctor.rating} ({doctor.reviewsCount} reviews)
+                  <Star className="w-3.5 h-3.5 fill-amber-400" /> {doctor.rating || "4.9"} ({doctor.reviewsCount || "350"} reviews)
                 </span>
                 <span>•</span>
-                <span>{doctor.experienceYears}+ Years Exp</span>
+                <span>{doctor.experience || doctor.experienceYears || "20+ Years"} Exp</span>
                 <span>•</span>
-                <span className="text-teal-400 font-bold">${doctor.fee} Fee</span>
+                <span className="text-teal-400 font-bold">{doctor.fee || "₹1,000"} Fee</span>
               </div>
             </div>
           </div>

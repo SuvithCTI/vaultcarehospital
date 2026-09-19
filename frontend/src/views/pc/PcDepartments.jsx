@@ -243,6 +243,12 @@ export const PcDepartments = () => {
           <img
             src="/banners/departments.jpg"
             alt="Vault Care Medical Wings"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={(e) => {
+              e.currentTarget.src = "/departments/cardiology.jpg";
+            }}
             className="w-full h-full object-cover object-center scale-100 filter brightness-[1.02] opacity-85"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-teal-50/40" />
@@ -313,6 +319,8 @@ export const PcDepartments = () => {
                 <img
                   src={bannerUrl}
                   alt={dept.name}
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => { e.currentTarget.src = "/departments/cardiology.jpg"; }}
                   className="w-full h-full object-cover"
                 />
@@ -351,7 +359,7 @@ export const PcDepartments = () => {
                   <div className="flex flex-wrap gap-1.5">
                     {itemData.services.map((p, idx) => (
                       <span key={idx} className="px-2.5 py-1 rounded-full bg-white/10 text-[10px] font-semibold text-white flex items-center gap-1 border border-white/10">
-                        <CheckCircle2 className="w-3 h-3 text-teal-400" />
+                        <CheckCircle2 className="w-3 text-teal-400" />
                         {p}
                       </span>
                     ))}
@@ -396,6 +404,8 @@ export const PcDepartments = () => {
               <img
                 src={bannerUrl}
                 alt={dept.name}
+                loading="lazy"
+                decoding="async"
                 onError={(e) => { e.currentTarget.src = "/departments/cardiology.jpg"; }}
                 className="absolute inset-0 w-full h-full object-cover object-center scale-105"
               />

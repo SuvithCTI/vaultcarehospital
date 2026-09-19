@@ -19,6 +19,12 @@ export const PcAppointments = () => {
           <img
             src="/banners/appointments.jpg"
             alt="Vault Care Appointment Concierge"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onError={(e) => {
+              e.currentTarget.src = "/departments/cardiology.jpg";
+            }}
             className="w-full h-full object-cover object-center scale-100 filter brightness-[1.05] opacity-75"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/70 to-teal-950/60" />

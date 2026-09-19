@@ -33,6 +33,8 @@ export const MobileDepartmentsView = () => {
           <img
             src={activeDept.bannerImage || activeDept.image || "/departments/cardiology.jpg"}
             alt={activeDept.name}
+            loading="lazy"
+            decoding="async"
             onError={(e) => { e.currentTarget.src = "/departments/cardiology.jpg"; }}
             className="w-full h-36 rounded-2xl object-cover"
           />
