@@ -1,0 +1,10 @@
+{
+  "name": "vault-care-hospital-platform",
+  "version": "1.0.0",
+  "description": "Vault Care Super Multi-Speciality Hospital High-Performance Web Platform",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview"
+  }
+}
