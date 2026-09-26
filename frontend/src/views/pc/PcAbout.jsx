@@ -67,8 +67,8 @@ export const PcAbout = () => {
       icon: <HeartPulse className="w-6 h-6 text-rose-600" />,
       bg: "bg-rose-50 border-rose-200",
       iconBg: "bg-rose-100 text-rose-700",
-      title: "24/7 Level-1 Trauma & Helipad",
-      desc: "Direct rooftop medevac air transfers, 5G GPS mobile ICU ambulances, and a sub-8-minute emergency triage door-to-doctor protocol."
+      title: "24/7 Level-1 Emergency & Trauma",
+      desc: "5G GPS mobile ICU ambulances, zero-wait trauma resuscitation, and a sub-8-minute emergency triage door-to-doctor protocol."
     },
     {
       icon: <ShieldCheck className="w-6 h-6 text-teal-600" />,
@@ -383,7 +383,7 @@ export const PcAbout = () => {
                 <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-rose-300/80 shadow-md shadow-rose-500/15 group-hover:scale-105 group-hover:border-rose-400 transition-all duration-200 bg-white">
                   <img
                     src="/logos/pillar_trauma.jpg"
-                    alt="24/7 Level-1 Trauma & Helipad Logo"
+                    alt="24/7 Level-1 Emergency & Trauma Logo"
                     loading="lazy"
                     decoding="async"
                     onError={(e) => {
@@ -398,9 +398,9 @@ export const PcAbout = () => {
                   Level-1
                 </span>
               </div>
-              <h4 className="text-xs sm:text-base font-bold text-slate-950 font-heading">Level-1 Trauma & Air</h4>
+              <h4 className="text-xs sm:text-base font-bold text-slate-950 font-heading">Level-1 Trauma & ICU</h4>
               <p className="text-[11px] sm:text-xs text-slate-700 leading-snug sm:leading-relaxed">
-                Rooftop helipad air transfers & sub-8-min emergency triage protocol.
+                5G mobile ICU fleet & sub-8-min emergency triage protocol.
               </p>
             </div>
           </motion.div>

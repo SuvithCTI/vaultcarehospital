@@ -148,13 +148,13 @@ export const PcDepartments = () => {
     "dept-6": {
       num: "06",
       name: "Emergency & Trauma 24/7",
-      tagline: "Level-1 Trauma Center & Helipad Link",
+      tagline: "Level-1 Trauma Center & 5G Mobile ICU",
       floor: "Ground Floor (Red Rapid Bay)",
       headline: "Accredited Level-1 Golden Hour Polytrauma Management & 24/7 Resuscitation",
       description: "Accredited Level 1 Trauma Center with mobile ICU fleet, stroke code triage, acute cardiac catheterization, and emergency surgical teams.",
       bannerImage: "/departments/emergency.jpg",
       icon: <ShieldAlert className="w-5 h-5 text-red-500" />,
-      equipment: "Point-of-Care Ultrasound (POCUS) • Portable 128-Slice Trauma CT • High-Tech Cardiac Defibrillators • Rooftop Helipad Link",
+      equipment: "Point-of-Care Ultrasound (POCUS) • Portable 128-Slice Trauma CT • High-Tech Cardiac Defibrillators • Dedicated Trauma OT Link",
       metrics: [
         { label: "Door-to-Doctor", value: "< 4 min" },
         { label: "Triage Readiness", value: "100% Ready" },

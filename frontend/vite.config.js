@@ -12,5 +12,14 @@ export default defineConfig({
     cssMinify: true,
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom"],
+          "vendor-animation": ["framer-motion", "canvas-confetti"],
+          "vendor-icons": ["lucide-react"]
+        }
+      }
+    }
   },
 });

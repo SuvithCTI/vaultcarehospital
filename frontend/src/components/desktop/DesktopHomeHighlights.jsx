@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { 
   Cpu, Zap, Microscope, BedDouble, ShieldCheck, 
-  Plane, Sparkles, ArrowRight, HeartPulse, CheckCircle2 
+  Truck, Sparkles, ArrowRight, HeartPulse, CheckCircle2 
 } from "lucide-react";
 import { useHospital } from "../../context/HospitalContext";
 import { useView } from "../../context/ViewContext";
@@ -73,15 +73,15 @@ export const DesktopHomeHighlights = () => {
       delay: 0.5,
     },
     {
-      id: "air-ambulance",
-      icon: <Plane className="w-7 h-7 text-blue-600" />,
-      title: "Rooftop Helipad & Air Ambulance",
-      badge: "Inter-State Critical Transport",
-      description: "Direct aeromedical evacuation transfer directly to ICU surgical bays without surface traffic delay.",
+      id: "icu-ambulance",
+      icon: <Truck className="w-7 h-7 text-blue-600" />,
+      title: "5G Smart ICU Ambulance Fleet",
+      badge: "24/7 Rapid Response",
+      description: "Mobile intensive care units equipped with advanced ventilators, telemetry, and live doctor connectivity en route.",
       bg: "bg-gradient-to-br from-blue-50 to-indigo-50/50",
       border: "border-blue-200 hover:border-blue-400",
       badgeColor: "bg-blue-100 text-blue-800 border-blue-200",
-      stat: "24/7 Helipad Active",
+      stat: "< 8 Min Avg Response",
       delay: 0.6,
     },
   ];

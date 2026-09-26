@@ -22,7 +22,7 @@ export const MobileContactView = () => {
   const importantQuestions = [
     {
       q: "How do I access 24/7 emergency & ambulance dispatch?",
-      answer: "Call +1 (800) 789-9999 for instant GPS ambulance dispatch. Direct rooftop helipad is operational 24/7."
+      answer: "Call +1 (800) 789-9999 for instant GPS ambulance dispatch. Mobile 5G ICU fleet is operational 24/7."
     },
     {
       q: "Which cashless health insurance plans are accepted?",

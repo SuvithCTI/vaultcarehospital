@@ -82,7 +82,7 @@ export const DesktopFooter = () => {
                 </div>
                 <div>
                   <span className="text-white font-black text-xs sm:text-sm block tracking-tight">{hospitalInfo?.emergencyHotline || "+1 (800) 789-9999"}</span>
-                  <span className="text-[9px] sm:text-[10px] text-rose-400 font-bold uppercase tracking-wider">Level-1 Trauma & Helipad</span>
+                  <span className="text-[9px] sm:text-[10px] text-rose-400 font-bold uppercase tracking-wider">Level-1 Emergency & Trauma</span>
                 </div>
               </div>
             </div>

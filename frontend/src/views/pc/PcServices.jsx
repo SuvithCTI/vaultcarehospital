@@ -41,7 +41,7 @@ export const PcServices = () => {
       title: "24/7 Emergency & Level-1 Trauma",
       category: "Emergency & Critical Care",
       badge: "Level-1 Trauma Certified",
-      tagline: "< 4 Min Door-to-Doctor • Direct Helipad Link",
+      tagline: "< 4 Min Door-to-Doctor • Mobile 5G ICU Fleet",
       headline: "Golden-Hour Polytrauma & Emergency Critical Care",
       description: "24/7 emergency surgical teams, mobile ICU ambulance dispatch, and instant trauma CT.",
       image: "/services/emergency.jpg",

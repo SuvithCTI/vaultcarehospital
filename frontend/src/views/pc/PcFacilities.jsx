@@ -66,16 +66,16 @@ const DEFAULT_FACILITIES = [
   },
   {
     id: "fac-4",
-    title: "24/7 Level-1 Emergency & Helipad Trauma Center",
+    title: "24/7 Level-1 Emergency & Critical Trauma Center",
     category: "Emergency & Trauma",
     capacity: "45 Resuscitation Bays",
     badgeColor: "bg-rose-100 text-rose-800 border-rose-200",
     themeGradient: "from-rose-500 to-red-600",
     image: "/services/emergency.jpg",
-    description: "Dedicated polytrauma resuscitation center with direct rooftop helipad connectivity and immediate surgical access.",
+    description: "Dedicated polytrauma resuscitation center with direct emergency surgical suite connectivity and immediate surgical access.",
     features: [
       "< 4 Minute Average Door-to-Emergency Physician",
-      "Direct Rooftop Helipad Air Ambulance Elevators",
+      "Dedicated Rapid-Access Emergency Surgical Elevators",
       "Dedicated On-Site Emergency Blood Transfusion Unit",
       "Mobile 5G Telemetry ICU Ambulance Fleet"
     ]
@@ -138,7 +138,7 @@ export const PcFacilities = () => {
     { id: "Critical Care", label: "Critical Care (ICU)" },
     { id: "Surgical Suites", label: "Modular OTs" },
     { id: "Radiology & Imaging", label: "Advanced Imaging" },
-    { id: "Emergency & Trauma", label: "Emergency & Helipad" },
+    { id: "Emergency & Trauma", label: "Emergency & Trauma" },
     { id: "Maternity & NICU", label: "Maternity & NICU" },
     { id: "Pharmacy Logistics", label: "Robotic Pharmacy" }
   ];
@@ -182,7 +182,7 @@ export const PcFacilities = () => {
               Hospital Infrastructure & Advanced Facilities
             </h1>
             <p className="text-slate-900 text-xs sm:text-lg font-normal leading-relaxed">
-              Spanning 650+ beds across 800,000 sq.ft, Vault Care is engineered with Level-1 trauma helipads, robotic surgical suites, and Class-100 clean rooms.
+              Spanning 650+ beds across 800,000 sq.ft, Vault Care is engineered with Level-1 emergency trauma centers, robotic surgical suites, and Class-100 clean rooms.
             </p>
           </div>
 

@@ -42,7 +42,7 @@ export const PcContact = () => {
       category: "Emergency & Trauma",
       color: "border-rose-200 bg-rose-50 text-rose-700",
       answer:
-        "Call our 24/7 Emergency Dispatch directly at +1 (800) 789-9999. Our GPS-tracked 5G mobile ICU ambulances deploy immediately with an average arrival under 10 minutes. Direct rooftop helipad air transfers are operational 24/7."
+        "Call our 24/7 Emergency Dispatch directly at +1 (800) 789-9999. Our GPS-tracked 5G mobile ICU ambulances deploy immediately with an average arrival under 10 minutes. Advanced resuscitation and emergency trauma surgery bays are operational 24/7."
     },
     {
       q: "Which cashless health insurance plans & TPAs are accepted?",
@@ -351,7 +351,7 @@ export const PcContact = () => {
             </div>
             <div className="flex items-center gap-2 text-rose-700 font-bold">
               <Ambulance className="w-4 h-4 flex-shrink-0" />
-              <span>ER & Helipad: 24/7 Active</span>
+              <span>ER & Trauma ICU: 24/7 Active</span>
             </div>
           </div>
         </div>
